@@ -1,0 +1,60 @@
+body {
+	background-color: #000000;
+	color: white;
+}
+
+.main-container {
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	vertical-align: center;
+}
+
+.inner-container {
+	border: 1px solid white;
+	width: 1200px;
+	height: 800px;
+	padding-top: 20px;
+
+}
+
+.break-section {
+	border: 1px solid red;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.wave {
+	border: 1px solid green;
+	height: 120px;
+	width: 90px;
+}
+
+.snd-3, .snd-4, .snd-5, .snd-6, .snd-7, .snd-8, .snd-10, .snd-11 {
+	width: 45px;
+}
+
+.wave img {
+	width: 45px;
+}
+
+.btn-section {
+	border: 1px solid yellow;
+	display: flex;
+	justify-content: center;
+
+
+}
+
+.control {
+	border: 1px solid blue;
+	height: 50px;
+	width: 50px;
+	margin: 3px 5px 3px 5px;
+	border-radius: 5px;
+	padding-top: 3px;
+	padding-left: 3px;
+}
