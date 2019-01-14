@@ -1,7 +1,10 @@
 body {
 	background: rgb(226,238,174);
 	background: linear-gradient(180deg, rgba(226,238,174,0.4920168751094187) 0%, rgba(148,230,233,0.9457983877144608) 100%);
-	color: white;
+	color: #cdcfd3;
+	font-family: 'Timmana', sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
 }
 
 .main-container {
@@ -15,11 +18,11 @@ body {
 
 .inner-container {
 	border: 1px solid black;
-	background-color: #0f2242;
+	background-color: #1a273f;
 	width: 1000px;
 	height: 600px;
 	padding-top: 20px;
-	border-radius: 5px;
+	border-radius: 7px;
 
 }
 
@@ -30,10 +33,68 @@ body {
 }
 
 .metro-section {
+	width: 350px;
+	height: 50px;
 	padding-left: 50px;
-	padding-top: 16px;
 	display: flex;
-	justify-content: space-around;
+	align-items: center;
+}
+.metro-text {
+	padding-top: 10px;
+}
+
+.metro-led {
+	width: 35px;
+	height: 30px;
+}
+
+#metro-led {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #4f0c0c;
+
+}
+
+.met-lit {
+	border: 1px solid #ff2323;
+	background-color: #ff2323;
+	box-shadow: 0 0 1px 1px #ff2323;
+	animation: ledOut 150ms;
+	-o-animation: ledOut 150ms;
+	-moz-animation: ledOut 150ms;
+	-webkit-animation: ledOut 150ms;
+	animation-fill-mode: forwards;
+	
+}
+
+@keyframes ledOut {
+	from {}
+	to {
+		
+		background-color: #4f0c0c;
+		border: 1px solid #4f0c0c;
+		box-shadow: 0 0 0 0 #000000;
+
+	} 
+}
+
+.metro-text {
+	/*line-height: 33px;*/
+	margin-left: 10px;
+	margin-right: 13px;
+}
+
+.metro-switch {
+	width: 40px;
+	height: 30px;
+	background-color: #a6aab2;
+	border-radius: 4px;
+}
+
+.switch-lit {
+	background-color: #22ff31;
+	box-shadow: 0 0 3px 3px #22ff31;
 }
 
 .badge {
@@ -43,14 +104,13 @@ body {
 }
 
 .break-section {
-	border: 1px solid red;
 	margin-bottom: 10px;
 	display: flex;
 	justify-content: center;
 }
 
 .wave {
-	background-image: url("../img/waveform_1.png");
+	background-image: url("../img/waveform_1i.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	border: 1px solid green;
@@ -63,7 +123,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 150px;
+	height: 170px;
 	width: 2px;
 	background-color: yellow;
 }
@@ -71,8 +131,8 @@ body {
 #mod-marker {
 	position: absolute;
 	top: 0;
-	left: 2px;
-	height: 150px;
+	left: 0;
+	height: 170px;
 	width: 2px;
 	background-color: red;
 
@@ -80,7 +140,6 @@ body {
 
 .mid-section {
 	padding: 0px 50px 0px 50px;
-	border: 1px solid green;
 	display: flex;
 	justify-content: space-between;
 	height: 80px;
@@ -88,19 +147,27 @@ body {
 }
 
 
-.spare-section {
-	border: 1px solid blue;
-	width: 300px;
+.bpm-section {
+	width: 400px;
+	display: flex;
+	padding-left: 40px;
+}
+
+.bpm-text {
+	line-height: 90px;
+	margin-left: 10px;
 }
 
 .pitch-section {
-	border: 1px solid blue;
 	width: 400px;
+	padding-left: 60px;
 }
 
 .pitch-text {
 	float: left;
-	width: 200px;
+	line-height: 90px;
+	margin-right: 10px;
+
 }
 
 .pitch-down-btn {
@@ -114,11 +181,10 @@ body {
 }
 
 .btn-section {
-	border: 1px solid yellow;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 30px;
+	margin-bottom: 3px;
 }
 
 .control {
@@ -133,6 +199,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.control.g {
+	margin-right: 90px;
 }
 
 .inner {
@@ -183,16 +253,25 @@ body {
 	/*box-shadow: inset 25px 0px 25px -25px rgba(0,0,0,0.45), inset -25px 0px 25px -25px rgba(0,0,0,0.45);*/
 }
 
+.text-section {
+	height: 30px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.text-box {
+	width: 200px;
+}
+
 .bottom-section {
-	height: 100px;
-	border: 1px solid purple;
+	height: 80px;
 	display: flex;
 	justify-content: space-between;
 	padding-left: 50px;
 }
 
 .bottom-left{
-	border: 1px solid white;
 	display: flex;
 	justify-content: center;
 
@@ -201,7 +280,6 @@ body {
 
 .bottom-right {
 	width: 300px;
-	border: 1px solid white;
 
 }
 
@@ -219,4 +297,20 @@ body {
 }
 .seek-inner:before {
 	width: 110px;
+}
+
+.fb {
+	margin-left: 265px;
+}
+
+.pb {
+	margin-right: 115px;
+}
+.ll {
+	margin-left: 165px;
+
+}
+	
+.ps {
+	margin-right: 18px;
 }
