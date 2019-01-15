@@ -1,8 +1,8 @@
 var s = 0;
 var t = 0;
 var playing = false;
-var bpm = 120;    
-var SecBpm = 120;    
+var bpm = 140;    
+var SecBpm = 140;    
 var div = 17;             
 var tickTimeout = null;
 var modTimeout = null;
@@ -13,6 +13,7 @@ var aDown = false;
 var sDown = false;
 var dDown = false;
 var fDown = false;
+var gDown = false;
 var jDown = false;
 var kDown = false;
 var lDown = false;
@@ -33,13 +34,11 @@ var butIn = document.getElementById("inner");
 var butOut = document.getElementById("control"); 
 var metLed = document.getElementById("metro-led"); 
 var playBtn = document.getElementById("play"); 
-var stopBtn = document.getElementById("stop"); 
+var stopBtn = document.getElementById("stop");
 
+var tLength = 0;
 
 var constPos = 0;
-
-
-
 
 var metroTick = new Howl({src: ["assets/sound/metro.ogg"]});
 
@@ -80,7 +79,7 @@ var cIn = document.querySelector(".inner.c");
 var vIn = document.querySelector(".inner.v");
 
 var l = 0;
-soundSelected = "break1";
+var soundSelected = "break1";
 
 var soundArr = [];
 
@@ -93,12 +92,37 @@ function loadSound(){
 		for (var i = 0; i <= 11; i++){
   			soundArr[i] = new Howl({src: ["assets/sound/amen/amen_" + i + ".ogg"]});
   		}
+  		tLength = 12;
+	}
+	if(soundSelected === "break2"){
+		soundState = [true, false, true, false, true, false, true, true, true, false, true, false, true, true, true, false];
+		soundArr = [];
+		for (var i = 0; i <= 10; i++){
+  			soundArr[i] = new Howl({src: ["assets/sound/break2/break2_" + i + ".ogg"]});
+  		}
+  		tLength = 10;
+	}
+	if(soundSelected === "break3"){
+		soundState = [true, false, true, false, true, false, true, true, true, true, true, true, true, false, true, true];
+		soundArr = [];
+		for (var i = 0; i <= 11; i++){
+  			soundArr[i] = new Howl({src: ["assets/sound/amen/amen_" + i + ".ogg"]});
+  		}
+	}
+	if(soundSelected === "break4"){
+		soundState = [true, false, true, false, true, false, true, true, true, true, true, true, true, false, true, true];
+		soundArr = [];
+		for (var i = 0; i <= 11; i++){
+  			soundArr[i] = new Howl({src: ["assets/sound/amen/amen_" + i + ".ogg"]});
+  		}
 	}
 
 };
 
+loadSound();
+
 function constLoop(){
-	if (aDown === false && sDown === false && dDown === false && fDown === false && lDown === false){
+	if (aDown === false && sDown === false && dDown === false && fDown === false && gDown === false && lDown === false){
 		soundArr[t]._rate = playbackRate;
 		soundPlaying._rate = playbackRate;
 		normPlay = true
@@ -117,7 +141,7 @@ function constLoop(){
 			soundArr[t].play();
 			soundPlaying = soundArr[t];
 			t++;
-			if (t >= 12){
+			if (t >= tLength){
 				t = 0;
 			}
 			s = ++s % div;	
@@ -130,7 +154,7 @@ function constLoop(){
 	} else {
 		if(soundState[s] === true){
 			t++;
-			if (t >= 12){
+			if (t >= tLength){
 				t = 0;
 			}
 			s = ++s % div;	
@@ -311,12 +335,17 @@ document.addEventListener('keydown', function(event) {
 	    zKey.classList.add("control-down");	
 		zIn.classList.add("inner-down");
 		zDown = true;
+		soundSelected = "break1";
+		loadSound();
+
   	} 
   	if (event.code == 'KeyX') {
 	    if(xDown) return;
 	    xKey.classList.add("control-down");	
 		xIn.classList.add("inner-down");
 		xDown = true;
+		soundSelected = "break2";
+		// loadSound();
   	} 
   	if (event.code == 'KeyC') {
 	    if(cDown) return;
