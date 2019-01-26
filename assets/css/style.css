@@ -1,7 +1,7 @@
 body {
 	background: rgb(226,238,174);
 	background: linear-gradient(180deg, rgba(226,238,174,0.4920168751094187) 0%, rgba(148,230,233,0.9457983877144608) 100%);
-	color: #cccccc;
+	color: #DDDDDD;
 	font-family: 'Timmana', sans-serif;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -122,7 +122,7 @@ body {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	border: 1px solid #d4cd7e;
-	box-shadow: 0 0 14px 1px #fff690;
+	box-shadow: 0 0 5px 2px #fff690;
 	border-radius: 2px;
 	height: 170px;
 	width: 900px;
