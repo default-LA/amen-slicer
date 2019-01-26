@@ -12,6 +12,11 @@ Click the link below for a working demo:
 
 [https://default-la.github.io/masher/](https://default-la.github.io/masher/)
 
+## Screenshot   
+
+![screenshot](https://raw.githubusercontent.com/default-LA/masher/master/assets/img/screenshot.png)  
+
+
 ## How to use 
 
 **Play / Stop** - Plays and stops the loop  
