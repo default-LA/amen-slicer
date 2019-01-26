@@ -15,7 +15,9 @@ Click the link below for a working demo:
 ## How to use 
 
 **Play / Stop** - Plays and stops the loop  
-**BPM DOWN / UP** - use the `Q` and `W` keyboard keys to change the BPM of the loop.   
+  
+**BPM Down / Up** - use the `Q` and `W` keyboard keys to change the BPM of the loop.  
+   
 **Base Pitch DOWN / UP - use the `O` and `P` keyboard keys to change the pitch of the loop.  
 
 **Freeze Buttons** - These buttons *freeze* the loop, and repeats the last sound chunk that was played until the key is released. These keys can also be combined to achieve other repeated time-signatures. 
