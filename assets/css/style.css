@@ -1,7 +1,7 @@
 body {
 	background: rgb(226,238,174);
 	background: linear-gradient(180deg, rgba(226,238,174,0.4920168751094187) 0%, rgba(148,230,233,0.9457983877144608) 100%);
-	color: #cdcfd3;
+	color: #cccccc;
 	font-family: 'Timmana', sans-serif;
 	font-size: 20px;
 	text-transform: uppercase;
@@ -18,7 +18,7 @@ body {
 
 .inner-container {
 	border: 1px solid black;
-	background-color: #1a273f;
+	background-color: #251647;
 	width: 1000px;
 	height: 600px;
 	padding-top: 20px;
@@ -44,22 +44,23 @@ body {
 }
 
 .metro-led {
-	width: 35px;
+	width: 30px;
 	height: 30px;
+	background-color: #4f0c0c;
+	border-radius: 50%;
 }
 
 #metro-led {
 	width: 30px;
 	height: 30px;
-	border-radius: 50%;
-	background-color: #4f0c0c;
 
 }
 
 .met-lit {
+	border-radius: 50%;
 	border: 1px solid #ff2323;
 	background-color: #ff2323;
-	box-shadow: 0 0 1px 1px #ff2323;
+	box-shadow: 0 0 2px 2px #ff2323;
 	animation: ledOut 150ms;
 	-o-animation: ledOut 150ms;
 	-moz-animation: ledOut 150ms;
@@ -80,7 +81,6 @@ body {
 }
 
 .metro-text {
-	/*line-height: 33px;*/
 	margin-left: 10px;
 	margin-right: 13px;
 }
@@ -92,6 +92,11 @@ body {
 	border-radius: 4px;
 }
 
+.met-switch-in {
+	background-color: #a5d682;
+	box-shadow: 0 0 4px 1px #a5d682;
+}
+
 .switch-lit {
 	background-color: #22ff31;
 	box-shadow: 0 0 3px 3px #22ff31;
@@ -101,6 +106,7 @@ body {
 	font-family: 'Fugaz One', cursive;
 	font-size: 40px;
 	padding-right: 50px;
+	text-transform: none;
 }
 
 .break-section {
@@ -113,7 +119,9 @@ body {
 	background-image: url("../img/waveform_1i.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	border: 1px solid green;
+	border: 1px solid #d4cd7e;
+	box-shadow: 0 0 8px 1px #fff690;
+	border-radius: 2px;
 	height: 170px;
 	width: 900px;
 	position: relative;
@@ -125,10 +133,10 @@ body {
 	left: 0;
 	height: 170px;
 	width: 2px;
-	background-color: yellow;
+	background-color: #232215;
 }
 
-#mod-marker {
+/*#mod-marker {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -136,7 +144,7 @@ body {
 	width: 2px;
 	background-color: red;
 
-}
+}*/
 
 .mid-section {
 	padding: 0px 50px 0px 50px;
